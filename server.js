@@ -35,7 +35,7 @@ var server = http.createServer(function (request, response) {
       '<img src="http://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-2.jpg" alt="Waving hi">'
     )
   } else {
-    var url = window.location.href
+    var url = request.url
     response.end(
       '<h1>Error 404</h1>' +
       '<p>Requested URL <p>' + url + '<p> not found<p>' +
