@@ -6,27 +6,27 @@ var server = http.createServer(function (request, response) {
   if (request.url === '/') {
     response.end(
       '<h1>Home</h1>' +
-      '<<p>Welcome to the home page!<p>>'
+      '<p>Welcome to the home page!</p>'
     )
   } else if (request.url === '/random-joke') {
     var rando = Math.floor(Math.random() * 10) + 1
     if (rando < 4) {
       response.end(
         '<h1>Joke 1</h1>' +
-        '<p>I dreamt I was forced to eat a giant marshmallow.<p>' +
-        '<p>When I woke up my pillow was gone!<p>'
+        '<p>I dreamt I was forced to eat a giant marshmallow.</p>' +
+        '<p>When I woke up my pillow was gone!</p>'
       )
     } else if (rando > 7) {
       response.end(
-        '<h1>Joke 3<h1>' +
-        '<p>My dog used to chase people on a bike a lot.<p>' +
-        '<p>It got so bad I had to take his bike away!<p>'
+        '<h1>Joke 3</h1>' +
+        '<p>My dog used to chase people on a bike a lot.</p>' +
+        '<p>It got so bad I had to take his bike away!</p>'
       )
     } else {
       response.end(
-        '<h1>Joke 2<h1>' +
-        '<p>What do you get when you cross-breed a shark and a cow?<p>' +
-        '<p>I don\'t know but I wouldn\'t try milking it!<p>'
+        '<h1>Joke 2</h1>' +
+        '<p>What do you get when you cross-breed a shark and a cow?</p>' +
+        '<p>I don\'t know but I wouldn\'t try milking it!</p>'
       )
     }
   } else if (request.url === '/cuteness') {
@@ -38,7 +38,7 @@ var server = http.createServer(function (request, response) {
     var url = request.url
     response.end(
       '<h1>Error 404</h1>' +
-      '<p>Requested URL <p>' + url + '<p> not found<p>' +
+      '<p>Requested URL </p>' + url + '<p> not found</p>' +
       '<img src="http://404-error.com/wp-content/uploads/2013/03/404-error.jpg" alt="Waving hi">'
     )
   }
