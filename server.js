@@ -42,6 +42,7 @@ var server = http.createServer(function (request, response) {
     response.end(
       '<h1>Cute Animal!!!</h1>' +
       '<a href="/">Home</a>' +
+      '<p></p>' +
       '<img src="http://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-2.jpg" alt="Waving hi">'
     )
   } else {
@@ -50,6 +51,7 @@ var server = http.createServer(function (request, response) {
       '<h1>Error 404</h1>' +
       '<p>Requested URL </p>' + url + '<p> not found</p>' +
       '<a href="/">Home</a>' +
+      '<p></p>' +
       '<img src="http://404-error.com/wp-content/uploads/2013/03/404-error.jpg" alt="Waving hi">'
     )
   }
