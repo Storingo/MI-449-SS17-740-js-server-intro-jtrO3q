@@ -39,6 +39,7 @@ var server = http.createServer(function (request, response) {
     response.end(
       '<h1>Error 404</h1>' +
       '<p>Requested URL </p>' + url + '<p> not found</p>' +
+      '<a href="..">Home</a>' +
       '<img src="http://404-error.com/wp-content/uploads/2013/03/404-error.jpg" alt="Waving hi">'
     )
   }
