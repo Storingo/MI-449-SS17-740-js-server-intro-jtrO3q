@@ -13,25 +13,35 @@ var server = http.createServer(function (request, response) {
     if (rando < 4) {
       response.end(
         '<h1>Joke 1</h1>' +
-        '<p>I dreamt I was forced to eat a giant marshmallow.</p>' +
-        '<p>When I woke up my pillow was gone!</p>'
+        '<a href="/">Home</a>' +
+        '<p>Knock - Knock!</p>' +
+        '<p>Who\'s there?</p>' +
+        '<p>Opportunity!</p>' +
+        '<p>That is impossible. Opportunity doesn\'t come knocking twice!</p>'
       )
     } else if (rando > 7) {
       response.end(
         '<h1>Joke 3</h1>' +
-        '<p>My dog used to chase people on a bike a lot.</p>' +
-        '<p>It got so bad I had to take his bike away!</p>'
+        '<a href="/">Home</a>' +
+        '<p>Knock - Knock!</p>' +
+        '<p>Who\'s there?</p>' +
+        '<p>The Door!</p>'
       )
     } else {
       response.end(
         '<h1>Joke 2</h1>' +
-        '<p>What do you get when you cross-breed a shark and a cow?</p>' +
-        '<p>I don\'t know but I wouldn\'t try milking it!</p>'
+        '<a href="/">Home</a>' +
+        '<p>Knock - Knock!</p>' +
+        '<p>Who\'s there?</p>' +
+        '<p>Double.</p>' +
+        '<p>Double who?</p>' +
+        '<p>W!</p>'
       )
     }
   } else if (request.url === '/cuteness') {
     response.end(
       '<h1>Cute Animal!!!</h1>' +
+      '<a href="/">Home</a>' +
       '<img src="http://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-2.jpg" alt="Waving hi">'
     )
   } else {
@@ -39,7 +49,7 @@ var server = http.createServer(function (request, response) {
     response.end(
       '<h1>Error 404</h1>' +
       '<p>Requested URL </p>' + url + '<p> not found</p>' +
-      '<a href="..">Home</a>' +
+      '<a href="/">Home</a>' +
       '<img src="http://404-error.com/wp-content/uploads/2013/03/404-error.jpg" alt="Waving hi">'
     )
   }
